@@ -20,7 +20,7 @@ First add this package to your nuxt config under modules section:
 export default defineNuxtConfig({
 	...
 	modules: [
-		....
+		// ....
 		'nuxt-eslint-global-imports',
 	],
 };
@@ -28,12 +28,16 @@ export default defineNuxtConfig({
 
 Then in you eslint config add this line to `extends` array:
 ```js
-module.exports = {
-	...
-	extends: [
-		.....
-		'./.nuxt/.eslintrc-auto-import.json',
-	],
+const globalImportsPath = './.nuxt/.eslintrc-auto-import.json';
+const nuxtAutoImports = JSON.parse(fs.readFileSync(globalImportsPath));
+
+export default {
+	//...
+	{
+		languageOptions: {
+			globals: nuxtAutoImports.globals,
+		},
+	},
 };
 ```
 

@@ -9,7 +9,10 @@ export default defineNuxtModule({
 		},
 	},
 	setup(moduleOptions, nuxt) {
-		let globalDefs = {};
+		let globalDefs = {
+			defineNuxtConfig: true,
+			definePageMeta: true,
+		};
 
 		nuxt.hook('imports:context', async (sources) => {
 			const imports = await sources.getImports();
