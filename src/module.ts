@@ -5,7 +5,7 @@ export default defineNuxtModule({
 		name: 'nuxt-eslint-import-globals',
 		configKey: 'nuxt-eslint-import-globals',
 		compatibility: {
-			nuxt: '^3.0.0',
+			nuxt: '^4.0.0',
 		},
 	},
 	setup(moduleOptions, nuxt) {

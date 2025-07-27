@@ -1,41 +1,43 @@
 {
-	"name": "nuxt-eslint-global-imports",
-	"description": "Create a json file with all the global imports for eslint",
-	"version": "1.0.1",
-	"type": "module",
-	"license": "MIT",
-	"scripts": {
-		"dev": "nuxi dev playground",
-		"dev:build": "nuxi build playground",
-		"dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
-		"lint": "eslint .",
-		"prepack": "nuxt-module-build",
-		"release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
-		"test": "vitest run",
-		"test:watch": "vitest watch"
-	},
-	"dependencies": {
-		"@nuxt/kit": "^3.12.2"
-	},
-	"devDependencies": {
-		"@kalimahapps/eslint-config": "^1.2.8",
-		"@nuxt/eslint-config": "^0.3.13",
-		"@nuxt/module-builder": "^0.8.0",
-		"@nuxt/schema": "^3.12.2",
-		"@nuxt/test-utils": "^3.13.1",
-		"changelogen": "^0.4.1",
-		"eslint": "^9.5.0",
-		"nuxt": "^3.12.2",
-		"vitest": "^0.28.5"
-	},
-	"exports": {
-		".": {
-			"types": "./dist/types.d.ts",
-			"require": "./dist/module.cjs",
-			"import": "./dist/module.mjs"
-		}
-	},
-	"main": "./dist/module.cjs",
-	"types": "./dist/types.d.ts",
-	"files": ["dist"]
+  "name": "nuxt-eslint-global-imports",
+  "description": "Create a json file with all the global imports for eslint",
+  "version": "2.0.0",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
+    "lint": "eslint .",
+    "prepack": "nuxt-module-build",
+    "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
+    "test": "vitest run",
+    "test:watch": "vitest watch"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^4.0.1"
+  },
+  "devDependencies": {
+    "@kalimahapps/eslint-config": "^1.2.93",
+    "@nuxt/eslint-config": "^1.7.1",
+    "@nuxt/module-builder": "^1.0.2",
+    "@nuxt/schema": "^4.0.1",
+    "@nuxt/test-utils": "^3.19.2",
+    "changelogen": "^0.4.1",
+    "eslint": "^9.32.0",
+    "nuxt": "^4.0.1",
+    "vitest": "^0.28.5"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.mts",
+      "import": "./dist/module.mjs"
+    }
+  },
+  "main": "./dist/module.mjs",
+  "types": "./dist/types.d.mts",
+  "files": [
+    "dist"
+  ],
+  "packageManager": "pnpm@9.15.3+sha512.1f79bc245a66eb0b07c5d4d83131240774642caaa86ef7d0434ab47c0d16f66b04e21e0c086eb61e62c77efc4d7f7ec071afad3796af64892fae66509173893a"
 }

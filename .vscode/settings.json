@@ -42,7 +42,9 @@
 		"json",
 		"jsonc",
 		"json5",
-		"vue"
+		"vue",
+		"yml",
+		"yaml"
 	],
 	"eslint.packageManager": "pnpm",
 	"editor.defaultFormatter": null,
@@ -107,5 +109,8 @@
 	},
 	"[php]": {
 		"editor.defaultFormatter": "KalimahApps.taqwim"
+	},
+	"github.copilot.advanced": {
+		"authProvider": "github"
 	},
 }
